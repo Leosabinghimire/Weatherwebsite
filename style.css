@@ -73,6 +73,9 @@ body {
 
 .weatherbox {
   text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .weatherbox img {
@@ -107,6 +110,9 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .weather-details .humidity,
@@ -144,9 +150,10 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 50px;
-  scale: 0;
+  transform: scale(0);
   opacity: 0;
   display: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .not-found img {
@@ -160,20 +167,14 @@ body {
   margin-top: 12px;
 }
 
-.weatherbox,
-.weather-details {
-  scale: 0;
-  opacity: 0;
-}
-
 .fadeIn {
-  animation: 0.5s fadeIn forwards;
+  animation: fadeIn 0.5s forwards;
   animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
   to {
-    scale: 1;
+    transform: scale(1);
     opacity: 1;
   }
 }

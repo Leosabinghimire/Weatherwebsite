@@ -48,19 +48,23 @@ search.addEventListener("click", () => {
           image.src = "image/Snow.png";
           break;
 
-        case "Cloud":
+        case "Clouds":
           image.src = "image/Cloud.png";
           break;
 
-        case "haze":
+        case "Haze":
           image.src = "image/Haze.png";
+          break;
+
+        case "Moon":
+          image.src = "image/moon.png";
           break;
 
         default:
           image.src = "";
       }
 
-      temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`; //Degree ko lagi alt+0176
+      temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
       description.innerHTML = `${json.weather[0].description}`;
       humidity.innerHTML = `${json.main.humidity}%`;
       wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
